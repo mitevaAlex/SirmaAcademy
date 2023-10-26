@@ -1,0 +1,126 @@
+header div.container.nav-container {
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo-wrapper,
+header nav,
+header .search-wrapper {
+    flex-grow: 1;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.mobile-nav {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav span {
+    background-color: #fff;
+    width: 50px;
+    height: 5px;
+    border-radius: 5px;
+    display: block;
+}
+
+header .search-wrapper {
+    text-align: end;
+}
+
+header .search-wrapper img {
+    cursor: pointer;
+}
+
+header .banner-bg {
+    background-image: url("../images/banner.svg");
+    background-size: cover;
+    background-position: center;
+}
+
+header .container.banner {
+    padding-top: 160px;
+    padding-bottom: 160px;
+}
+
+header .container.banner h1 {
+    font-size: 125px;
+    font-weight: 700;
+    margin-bottom: 80px;
+}
+
+header .container.banner p {
+    font-size: 30px;
+    font-weight: 400;
+    max-width: 40%;
+    margin-bottom: 50px;
+}
+
+/* Large devices */
+@media screen and (max-width: 992px) {
+    header .container.banner {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .container.banner>div {
+        text-align: center;
+    }
+
+    header .search-wrapper,
+    header nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    header .container.banner h1 {
+        font-size: 68px;
+    }
+
+    header .container.banner p {
+        font-size: 20px;
+        max-width: unset;
+    }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 600px) {
+
+    header .search-wrapper,
+    header nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    header .logo-wrapper img {
+        width: 150px;
+    }
+
+}
